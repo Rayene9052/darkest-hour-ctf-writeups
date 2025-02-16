@@ -50,7 +50,7 @@ k_{\text{min}} = \frac{L^e - c + n - 1}{n}
 \[
 k_{\text{max}} = \frac{U^e - c}{n}
 \]
-## Writeup
+## Solver 
  ```
  import gmpy2
 
