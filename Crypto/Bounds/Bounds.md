@@ -44,11 +44,11 @@ So the idea here is to limit the range of k to what gives us that the flag start
 Thus, \( m \) lies in the range \([L, U]\), meaning \( m^e \) lies in the range \([L^e, U^e]\). Since \( m^e = c + k \cdot n \), this allows us to restrict \( k \) to:
 
 \[
-k_{\text{min}} = \frac{L^e - c + n - 1}{n}
+k_{\text{min}} = \frac{}{L^e - c + n - 1}{n}
 \]
 
 \[
-k_{\text{max}} = \frac{U^e - c}{n}
+k_{\text{max}} = \frac{}{U^e - c}{n}
 \]
 ## Solver 
  ```
