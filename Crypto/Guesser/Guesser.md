@@ -26,11 +26,11 @@ S(t) = \prod_{i=0}^{4} (w_i - t) \mod 29
 $$
 
 where:
-- \( s_0, s_1, s_2, s_3, s_4 \) are the modular values of the first five letters of the secret word.
-- \( t \) is a chosen integer (determined by the guess).
+- $$ \( s_0, s_1, s_2, s_3, s_4 \) == are the modular values of the first five letters of the secret word.
+- $$ \( t \) $$ is a chosen integer (determined by the guess).
 - The score \( S(t) \) is the product of the differences between the secret letters and \( t \), modulo 29.
 
-The challenge is to determine the original values \( s_0, s_1, s_2, s_3, s_4 \) given different values of \( S(t) \).
+The challenge is to determine the original values $$ \( s_0, s_1, s_2, s_3, s_4 \) $$ given different values of $$ \( S(t) \) $$.
 
 ---
 
@@ -46,37 +46,37 @@ guesses = ['aaaaaa', 'baaaaa', 'abaaaa', 'aabaaa', 'aaabaa', 'aaaaba']
 Each of these words ensures that one specific character's modular value is shifted. By observing the score, we gather equations for different values of \( t \).
 
 ### **2. Extracting Modular Values of the Secret Word**
-For each score \( S(t) \), we compute a related ratio \( R_i \):
-
+For each score $$ \( S(t) \) $$ , we compute a related ratio $$ \( R_i \) $$ :
+$$
 \[
 R_i = \frac{S(i+1)}{S(0)} \mod 29
 \]
-
+$$
 Using this ratio, we solve for each letter's modular representation:
-
+$$
 \[
 w_i = \frac{R_i \cdot 97 - 98}{R_i - 1} \mod 29
 \]
-
+$$
 Here:
-- \( 97 \) corresponds to `'a'` in ASCII.
-- \( w_i \) gives us the modular representation of the letter.
+- $$ \( 97 \) $$ corresponds to `'a'` in ASCII.
+- $$ \( w_i \) $$ gives us the modular representation of the letter.
 
 Finally, we map these values back to ASCII letters.
 
 ### **3. Computing the Last Letter**
 The sixth letter doesn't directly affect the score. However, the symmetric sum property tells us:
-
+$$
 \[
 S(0) = \prod_{i=0}^{4} (w_i - 97) \mod 29
 \]
-
+$$
 Rearranging:
-
+$$
 \[
 w_5 = 97 + \left(\frac{S(0)}{\prod_{i=0}^{4} (w_i - 97)} \right) \mod 29
 \]
-
+$$
 This ensures we correctly reconstruct the full six-letter word.
 
 
@@ -168,3 +168,5 @@ s.close()
 
 
 ```
+## Flag
+![FlagGuesser](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/dada45b421e75021ae7e0115d782aa61b56231c9/assets/guess%20solver%20output.PNG)
