@@ -47,16 +47,14 @@ Each of these words ensures that one specific character's modular value is shift
 
 ### **2. Extracting Modular Values of the Secret Word**
 For each score $$ \( S(t) \) $$ , we compute a related ratio $$ \( R_i \) $$ :
-$$
 
+$$
 R_i = \frac{S(i+1)}{S(0)} \mod 29
-
 $$
+
 Using this ratio, we solve for each letter's modular representation:
 $$
-
 w_i = \frac{R_i \cdot 97 - 98}{R_i - 1} \mod 29
-
 $$
 Here:
 - $$ \( 97 \) $$ corresponds to `'a'` in ASCII.
