@@ -34,5 +34,7 @@ while 1:
 
 ```
 
-AI helped me on this one , i asked it how to get a shell from a GDB environment and under those restrictions to get a flag and he gave me some commands from which this one worked !
+AI helped me on this one , i asked it how to get a shell from a GDB environment and under those restrictions to get a flag and he gave me some commands from which this one worked !  
+
+
 ![GDB1](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/0de1dab5a8d420fd7225bfc13e45c102954e7992/assets/gdb1.PNG)
