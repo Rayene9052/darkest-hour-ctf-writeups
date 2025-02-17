@@ -5,10 +5,10 @@
 
 Some people write their passwords down, others use password managers, but me? I draw them. It’s a foolproof method... until I forget what I drew. Luckily, my computer never truly forgets.
 
+**File:** `Sketchy.7z`
 **Flag format:** `Securinets{flag_here}`
 
 **Author:** PetriQore  
-**File:** Sketchy.7z
 
 ---
 
