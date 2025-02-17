@@ -20,3 +20,5 @@ Let's try to decode it with cyberchef
 
 Well there is nothing to see here , but the thing is  we must notice that the cookie changes everytime when you change the username . It's like  the cookie  depends  somehow on  the username . After some thinking i noticed that the operation occuring is a XOR operation between the username and the cookie . 
 ## Time to get the key ! 
+![CyberChef2](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/5af6dd064b9ed26347d057877af1dd39b915f42c/assets/cookie2.PNG)
+The XOR operation is occuring in the middle of the cookie , so the key here is EAXYXOR ! We're almost there , now let's decode the cookie with that key .
