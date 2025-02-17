@@ -37,16 +37,16 @@ The challenge is to determine the original values $$ \( s_0, s_1, s_2, s_3, s_4 
 ## **Step-by-Step Approach**
 
 ### **1. Establishing the Score Pattern**
-We start by sending six specific guesses where only one letter is different in each, allowing us to compute different \( S(t) \) values.
+We start by sending six specific guesses where only one letter is different in each, allowing us to compute different $\( S(t) \)$ values.
 
 ```python
 guesses = ['aaaaaa', 'baaaaa', 'abaaaa', 'aabaaa', 'aaabaa', 'aaaaba']
 ```
 
-Each of these words ensures that one specific character's modular value is shifted. By observing the score, we gather equations for different values of \( t \).
+Each of these words ensures that one specific character's modular value is shifted. By observing the score, we gather equations for different values of $\( t \)$ .
 
 ### **2. Extracting Modular Values of the Secret Word**
-For each score $$ \( S(t) \) $$ , we compute a related ratio $$ \( R_i \) $$ :
+For each score $$\( S(t) \)$$ , we compute a related ratio $$\( R_i \)$$ :
 
 $$
 R_i = \frac{S(i+1)}{S(0)} \mod 29
@@ -59,29 +59,29 @@ w_i = \frac{R_i \cdot 97 - 98}{R_i - 1} \mod 29
 $$
 
 Here:
-- $$ \( 97 \) $$ corresponds to `'a'` in ASCII.
-- $$ \( w_i \) $$ gives us the modular representation of the letter.
+- $$\( 97 \)$$ corresponds to `'a'` in ASCII.
+- $$\( w_i \)$$ gives us the modular representation of the letter.
 
 Finally, we map these values back to ASCII letters.
 
 ### **3. Computing the Last Letter**
 The sixth letter doesn't directly affect the score. However, the symmetric sum property tells us:
-$$
 
+$$
 S(0) = \prod_{i=0}^{4} (w_i - 97) \mod 29
-
 $$
+
 Rearranging:
-$$
 
+$$
 w_5 = 97 + \left(\frac{S(0)}{\prod_{i=0}^{4} (w_i - 97)} \right) \mod 29
-
 $$
+git
 This ensures we correctly reconstruct the full six-letter word.
 
 
 
-## ** Solver **
+## **Solver**
 ```
 import socket
 
