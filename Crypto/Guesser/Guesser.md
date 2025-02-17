@@ -8,7 +8,6 @@ You got 7 tries to make it work .
 ## Author : Nedim
 And we're giving a python file
 
-The remote service updates a cumulative score after each guess. This score is updated by multiplying by a product based on differences between the secret letters (converted into m
 ## **Overview**
 
 This challenge involves a remote server running a word-guessing game on `3.250.32.255:2031`. The objective is to deduce a secret six-letter word using a mathematical scoring system based on modular arithmetic (mod 29). The score after each guess provides indirect information about the word, which we can extract using a carefully crafted approach.
@@ -26,11 +25,11 @@ S(t) = \prod_{i=0}^{4} (w_i - t) \mod 29
 $$
 
 where:
-- $$ \( s_0, s_1, s_2, s_3, s_4 \) $$ == are the modular values of the first five letters of the secret word.
-- $$ \( t \) $$ is a chosen integer (determined by the guess).
-- The score \( S(t) \) is the product of the differences between the secret letters and \( t \), modulo 29.
+- $$\( s_0, s_1, s_2, s_3, s_4 \)$$ == are the modular values of the first five letters of the secret word.
+- $$\( t \)$$ is a chosen integer (determined by the guess).
+- The score $$\( S(t) \)$$ is the product of the differences between the secret letters and $$\( t \)$$ , modulo 29.
 
-The challenge is to determine the original values $$ \( s_0, s_1, s_2, s_3, s_4 \) $$ given different values of $$ \( S(t) \) $$.
+The challenge is to determine the original values $$\( s_0, s_1, s_2, s_3, s_4 \)$$ given different values of $$\( S(t) \)$$ .
 
 ---
 
@@ -76,7 +75,7 @@ Rearranging:
 $$
 w_5 = 97 + \left(\frac{S(0)}{\prod_{i=0}^{4} (w_i - 97)} \right) \mod 29
 $$
-git
+
 This ensures we correctly reconstruct the full six-letter word.
 
 
