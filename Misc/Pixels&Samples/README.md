@@ -70,7 +70,7 @@ A WAV file has a 44-byte header. Skip that header to get just the sample data.
 Check the `output.png` file.  
 If the image appears stretched or distorted, try different factor pairs until it looks correct. In this case, `775 × 3819` works. If it didn’t, we would test other pairs.
 
-### Step 5: Retrieving the Flag
+### Step 5. Retrieving the Flag
 After raw data conversion with the right dimensions, we get a black-and-white image flipped and mirrored.
 
 ![Screenshot 4](Screenshots/p4.png)
