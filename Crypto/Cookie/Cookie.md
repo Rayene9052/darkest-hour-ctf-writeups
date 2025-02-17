@@ -22,3 +22,5 @@ Well there is nothing to see here , but the thing is  we must notice that the co
 ## Time to get the key ! 
 ![CyberChef2](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/5af6dd064b9ed26347d057877af1dd39b915f42c/assets/cookie2.PNG)
 The XOR operation is occuring in the middle of the cookie , so the key here is EAXYXOR ! We're almost there , now let's decode the cookie with that key .
+![CyberChef3](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/9dd1d2eaaed74c2a8378883344893292f4f5eea8/assets/cookie3.PNG)
+We got something really interesting !! a boolean logic variable named isadmin set to 0 and the username ! So let's try changing isadmin to 1 and the username name to admin , XOR it again with the same key , and put it back in the website !
