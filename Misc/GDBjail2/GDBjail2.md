@@ -6,7 +6,7 @@ escape (2)
 nc pwn.dh.securinets.tn 2017
 
 And we're given a python code
-
+# Code
 ```
 import gdb 
 
@@ -32,6 +32,7 @@ while 1:
 
 # Method 
 Ai also helped me on this one  giving me that command 
+
 ![DGBjail2](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/1a27cacc215c4a23943379b94934ae06255fae2a/assets/gdbjail2.PNG)
 
 This was not the way  that it's supposed to be done as the author told me , we were intended to write a shell code to manipulate some register values .
