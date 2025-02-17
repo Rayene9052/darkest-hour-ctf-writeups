@@ -24,3 +24,8 @@ Well there is nothing to see here , but the thing is  we must notice that the co
 The XOR operation is occuring in the middle of the cookie , so the key here is EAXYXOR ! We're almost there , now let's decode the cookie with that key .
 ![CyberChef3](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/9dd1d2eaaed74c2a8378883344893292f4f5eea8/assets/cookie3.PNG)
 We got something really interesting !! a boolean logic variable named isadmin set to 0 and the username ! So let's try changing isadmin to 1 and the username name to admin , XOR it again with the same key , and put it back in the website !
+[!CyberChef4](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/83cd8e0a73fdc11f3ee79c9cdc49936239917416/assets/cookie4.PNG)
+
+AND HERE IS OUR FLAG !! This challenge got few solves ( 2 or 3 ) meanwhile it wasn't that hard as an idea 
+
+[!FLAG]
