@@ -25,7 +25,7 @@ S(t) = \prod_{i=0}^{4} (w_i - t) \mod 29
 $$
 
 where:
-- $$\( s_0, s_1, s_2, s_3, s_4 \)$$ == are the modular values of the first five letters of the secret word.
+- $$\( s_0, s_1, s_2, s_3, s_4 \)$$  are the modular values of the first five letters of the secret word.
 - $$\( t \)$$ is a chosen integer (determined by the guess).
 - The score $$\( S(t) \)$$ is the product of the differences between the secret letters and $$\( t \)$$ , modulo 29.
 
