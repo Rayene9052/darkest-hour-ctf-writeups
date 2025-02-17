@@ -6,6 +6,7 @@
 Some people write their passwords down, others use password managers, but me? I draw them. It’s a foolproof method... until I forget what I drew. Luckily, my computer never truly forgets.
 
 **Flag format:** `Securinets{flag_here}`
+
 **Author:** PetriQore  
 **File:** Sketchy.7z
 
@@ -36,7 +37,7 @@ Based on the challenge description, we know that the flag is somehow related to 
 
 We’ll use **Volatility** to analyze the memory dump and look for drawing processes, starting with a basic listing of running processes.
 
-Run the following command to view the process list:
+#### Run the following command to view the process list:
 
 ```bash
 volatility -f Windows.vmem --profile=WinXPSP3x86 pslist
@@ -54,7 +55,7 @@ Since **mspaint** is a program that deals with drawing, it is highly likely that
 To get a memory dump of **mspaint**, we use the **memdump** plugin in Volatility.
 This will allow us to extract the raw memory of the **mspaint** process, which we can then analyze for any hidden information.
 
-Run the following command to dump the memory of the **mspaint** process:
+#### Run the following command to dump the memory of the **mspaint** process:
 
 ```bash
 volatility -f Windows.vmem --profile=WinXPSP3x86 memdump -p 260 -D .
@@ -78,18 +79,19 @@ mv 260.dmp 260.data
 ### **Step 5. Open the File in GIMP**
 
 We open the **260.data** file with **GIMP** (or any image editor that can handle raw data files).
-However, upon opening it, we notice some distortion or unexpected results.
+However, upon opening it, we notice some **distortion** or unexpected results.
 
 ![Screenshot 1](Screenshots/p2.png)
 
-This is normal as the data was not originally intended to be an image, but we can still work with it.
+#### This is normal as the data was not originally intended to be an image, but we can still work with it.
 
-In **GIMP**, we begin adjusting the **height** and **width** of the image file. We keep modifying these values until something starts to appear on the screen.
-We adjust until a clear pattern starts to emerge. (Around Height=1784 and Width=1920)
+In **GIMP**, we begin adjusting the **height** and **width** of the image file.
+We keep modifying these values until something starts to appear on the screen.
+We adjust until a **clear pattern** starts to emerge. (Around Height=1784 and Width=1920)
 
 ![Screenshot 1](Screenshots/p3.png)
 
-We click on Open.
+#### We click on Open.
 
 ![Screenshot 1](Screenshots/p4.png)
 
