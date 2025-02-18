@@ -11,7 +11,7 @@ Be creative
 
 ![LovePortal2](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/95f013fd44dbb1af13db313e8e76185748c0d795/assets/love_portal2.PNG)
 
-### Now we're gonna try some LFI exploitation! I tried on every page and then decoded from base64 but only got something interessting from the messages page !
+### Now we're gonna try some LFI exploitation! I tried on every page and then decoded from base64 but only got something interessting from the index page !
 
 ![LovePortal3](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/95f013fd44dbb1af13db313e8e76185748c0d795/assets/love_portal3.PNG)
 
@@ -19,7 +19,7 @@ Be creative
 
 ![LovePortal4](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/95f013fd44dbb1af13db313e8e76185748c0d795/assets/love_portal4.PNG)
 
-### And that's what we get from decoding what we got from the messages page exploitation ! 
+### And that's what we get from decoding what we got from the index page exploitation ! 
 
 ![LovePortal45](https://github.com/Rayene9052/darkest-hour-ctf-writeups/blob/95f013fd44dbb1af13db313e8e76185748c0d795/assets/love_portal4%2C5.PNG)
 
